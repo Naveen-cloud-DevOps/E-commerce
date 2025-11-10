@@ -1,10 +1,10 @@
-# Use official Nginx image as base
+# Use lightweight Nginx image
 FROM nginx:alpine
 
-# Copy your HTML file into the Nginx web directory
-COPY index.html /usr/share/nginx/html
+# Copy website files to Nginx default directory
+COPY . /usr/share/nginx/html
 
-# Expose port 80 for web traffic
+# Expose port 80
 EXPOSE 80
 
 # Start Nginx
